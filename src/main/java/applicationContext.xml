@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd"
+	default-autowire="byName">
+	  <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+        <property name="locations">  
+           <list>  
+              <!-- 这里支持多种寻址方式：classpath和file -->  
+              <value>classpath:application.properties</value>  
+              <!-- 推荐使用file的方式引入，这样可以将配置和代码分离 -->  
+            </list>  
+        </property>  
+    </bean>  
+    
+    	<!-- database config -->
+	<bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource" destroy-method="close" autowire="no">
+		<property name="driverClassName">
+			<value>${mysql.jdbc.driver}</value>
+		</property>
+		<property name="url">
+			<value>${mysql.jdbc.url}</value>
+		</property>
+		<property name="username">
+			<value>${mysql.jdbc.user}</value>
+		</property>
+		<property name="password">
+			<value>${mysql.jdbc.password}</value>
+		</property>
+		<!-- 初始化连接大小 -->
+		<property name="initialSize" value="3" />
+		<property name="initSQL" value="SELECT 1"/>
+		<!-- 连接池最大使用连接数量 -->
+		<property name="maxActive" value="10" />
+		<!-- 连接池最大空闲 -->
+		<property name="maxIdle" value="5" />
+		<!-- 连接池最小空闲 -->
+		<property name="minIdle" value="5" />
+		<!-- 获取连接最大等待时间 -->
+		<property name="maxWait" value="1000" />
+		<!-- 超过removeAbandonedTimeout时间后，是否进 行没用连接（废弃）的回收（默认为false，调整为true) -->
+		<property name="removeAbandoned" value="true" />
+		<!-- 超过时间限制，回收没有用(废弃)的连接（默认为 300秒，调整为180） -->
+		<property name="removeAbandonedTimeout" value="300" />
+		
+		<property name="validationQuery" value="SELECT 1" />
+		
+		<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+		<property name="timeBetweenEvictionRunsMillis" value="60000" />
+		<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+		<property name="minEvictableIdleTimeMillis" value="252000" />
+	
+	<property name="testOnBorrow"><value>true</value></property>  
+    <property name="testOnReturn"><value>false</value></property>  
+    <property name="testWhileIdle"><value>true</value></property>  
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+   
+    <tx:annotation-driven transaction-manager="transactionManager" />
+    
+	<!-- 线程池 -->
+	<bean id="threadPoolTaskExecutor"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<property name="corePoolSize" value="100" />
+		<property name="maxPoolSize" value="300" />
+		<property name="queueCapacity" value="100" />
+	</bean>
+
+</beans>

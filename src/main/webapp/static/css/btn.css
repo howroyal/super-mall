@@ -1,0 +1,124 @@
+
+.icon_public, .btn_pay, .btn_recharge, .btn_rel, .btn_batch, .btn-01, .btn-01:hover, .btn-02, .btn-02:hover, .btn_to_pay, .btn_120, .fn-s1, .fn-s2, .btn_again, .c-btn-02 {
+    display: inline-block;
+    font-style: normal;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    vertical-align: middle;
+}
+.btn_pay {
+    background: rgba(0, 0, 0, 0) none repeat scroll -244px -90px;
+    height: 28px;
+    line-height: 28px;
+    width: 84px;
+}
+.btn_pay:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll -247px -125px;
+    text-decoration: none;
+}
+.btn_recharge {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    height: 40px;
+    line-height: 40px;
+    width: 140px;
+}
+.btn_recharge:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 -45px;
+    text-decoration: none;
+}
+.btn_rel {
+    background: rgba(0, 0, 0, 0) none repeat scroll -125px -160px;
+    height: 28px;
+    line-height: 28px;
+    width: 84px;
+}
+.btn_rel:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll -214px -160px;
+    text-decoration: none;
+}
+.btn_batch {
+    background: rgba(0, 0, 0, 0) none repeat scroll -86px -226px;
+    height: 28px;
+    line-height: 28px;
+    width: 81px;
+}
+.btn_batch:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 -226px;
+    text-decoration: none;
+}
+.btn-01 {
+    background: rgba(0, 0, 0, 0) none repeat scroll -172px -193px;
+    height: 28px;
+    line-height: 28px;
+    width: 81px;
+}
+.btn-01:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll -86px -193px;
+    height: 28px;
+    line-height: 28px;
+    width: 81px;
+}
+.btn-02 {
+    background: rgba(0, 0, 0, 0) none repeat scroll -172px -226px;
+    height: 28px;
+    line-height: 28px;
+    width: 81px;
+}
+.btn-02:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 -193px;
+    height: 28px;
+    line-height: 28px;
+    width: 81px;
+}
+.btn_to_pay {
+    background: rgba(0, 0, 0, 0) none repeat scroll -85px -259px;
+    height: 24px;
+    line-height: 24px;
+    width: 80px;
+}
+.btn_to_pay:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 -259px;
+    text-decoration: none;
+}
+.btn_120 {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 -160px;
+    height: 28px;
+    line-height: 28px;
+    width: 120px;
+}
+.btn_120:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll -122px -125px;
+    text-decoration: none;
+}
+.fn-s1 {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 -125px;
+    height: 30px;
+    line-height: 30px;
+    width: 117px;
+}
+.fn-s2 {
+    background: rgba(0, 0, 0, 0) none repeat scroll -122px -90px;
+    height: 30px;
+    line-height: 30px;
+    width: 117px;
+}
+.btn_again {
+    background: rgba(0, 0, 0, 0) none repeat scroll -145px -33px;
+    height: 28px;
+    line-height: 28px;
+    width: 192px;
+}
+.btn_again:hover {
+    background: rgba(0, 0, 0, 0) none repeat scroll -145px 0;
+    text-decoration: none;
+}
+.c-btn-02 {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 -90px;
+    height: 30px;
+    line-height: 30px;
+    width: 117px;
+}
+.btn_recharge, .btn_recharge:hover, .btn_again:hover, .btn_again, .c-btn-02, .fn-s2, .fn-s1, .btn_120:hover, .btn_120, .btn_pay, .btn_pay:hover, .btn_rel, .btn_rel:hover, .btn-02:hover, .btn-01:hover, .btn-01, .btn_batch:hover, .btn_batch, .btn-02, .btn_to_pay:hover, .btn_to_pay {
+    background-image: url("../img/sprite_btn.png");
+}

@@ -1,0 +1,112 @@
+.fn_page {
+    color: #3c3c3c;
+    font-family: "宋体",tahoma;
+    font-size: 14px;
+}
+.fn_page ul{
+	overflow:hidden;
+	width:1024px;
+	margin:10px auto;
+}
+.fn_page li {
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+.fn_page input {
+    border: 1px solid #d7d7d7;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 5px;
+    padding: 4px 6px;
+    text-align: center;
+    width: 22px;
+}
+.fn_page span, .fn_page input {
+    float: left;
+}
+.fn_page a {
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    color: #666;
+    display: inline-block;
+    *display:inline;
+    *zoom:1;
+    height: 28px;
+    line-height: 28px;
+    margin: 0 5px;
+    padding: 0 12px;
+    text-decoration: none;
+}
+.fn_page a:hover {
+    border-color: #999;
+    color: #f22e00;
+}
+.fn_page .page_ellipsis {
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0 10px;
+}
+.fn_page .active a {
+    border-color: #999;
+    color: #f22e00;
+}
+.fn_page .off a {
+    border-color: #d7d7d7;
+    color: #d7d7d7;
+}
+.fn_page .off a:hover {
+    color: #d7d7d7;
+    cursor: no-drop;
+}
+.fn_page .off span {
+    cursor: no-drop;
+}
+.fn_page .off .arrow_prev {
+    border-right: 6px solid #d7d7d7;
+}
+.fn_page .off .arrow_next {
+    border-left: 6px solid #d7d7d7;
+}
+.prve a:hover, .next a:hover {
+    color: #666;
+}
+.prve span, .next span {
+    cursor: pointer;
+}
+.arrow_prev, .arrow_next {
+    border-bottom: 6px solid transparent;
+    border-top: 6px solid transparent;
+    display: inline-block;
+    float: left;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    margin-top: 8px;
+    width: 0;
+}
+.arrow_prev {
+    border-right: 6px solid #333;
+    margin-right: 5px;
+}
+.arrow_next {
+    border-left: 6px solid #333;
+    margin-left: 5px;
+}
+
+/*
+	修改jq ui 样式
+*/
+/* .ui-widget-header{
+	background:#ccc;
+	border:1px solid #ccc;
+}
+.ui-state-default .ui-icon{
+	background:none;
+	color:#000;	
+} */
+
+/*弹窗样式调整*/
+#showReply .pop_ft{width:60px;}
+.pop_bd .cont{padding:20px 10px;}
+
